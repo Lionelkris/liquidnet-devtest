@@ -15,6 +15,14 @@ def create_user(user_email):
     db.session.commit()
 
 
+def create_book():
+    book1 = Books(title='Inferno', author='Dan Brown')
+    book2 = Books(title='The Alchemist', author='Paulo Coelho')
+    db.session.add(book1)
+    db.session.add(book2)
+    db.session.commit()
+
+
 def list_all_request():
     request_schema = RequestSchema()
     all_request_objects = BookRequests.query.all()

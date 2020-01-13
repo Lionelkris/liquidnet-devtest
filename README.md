@@ -1,4 +1,5 @@
-#Library request
+**#Library request**
+
 
 There are 2 endpoints exposed here:
 
@@ -24,3 +25,8 @@ For docker
 `docker-compose build`
 
 `docker-compose up `
+
+Data population is done via app start up from a script "create_book()". Only data for Books needs to be populated.
+
+For user, on each request if the user exists in the system we go ahead with the request OR we will create it.
+

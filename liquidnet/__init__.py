@@ -23,4 +23,6 @@ def create_app(configuration=config.DevelopmentConfig):
         db.create_all()
         from liquidnet.library import routes
         app.register_blueprint(routes.library)
+        from liquidnet.library.library_service import create_book
+        create_book()
         return app

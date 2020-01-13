@@ -10,8 +10,8 @@ RUN pip install -r requirements.txt
 
 ADD . .
 
-EXPOSE 5000
+EXPOSE 8000
 
-ENV FLASK_APP=run.py
+#ENV FLASK_APP=run.py
 
 CMD python3 -m unittest discover; python3 run.py
