@@ -30,3 +30,7 @@ Data population is done via app start up from a script "create_book()". Only dat
 
 For user, on each request if the user exists in the system we go ahead with the request OR we will create it.
 
+Please note that the application is running on port 8000
+
+sample end point : http://127.0.0.1:8000/request
+
