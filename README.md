@@ -1,4 +1,4 @@
-**#Library request**
+**Library request**
 
 
 There are 2 endpoints exposed here:
@@ -34,3 +34,28 @@ Please note that the application is running on port 8000
 
 sample end point : http://127.0.0.1:8000/request
 
+sample curl commands:
+
+post data for creating new request - outputs: {email of the requestor, book title, request id and timestamp}
+
+`curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/request -d '{"email":"van@33.com", "title":"The Alchemist"}'`
+
+get all requests
+
+`curl http://127.0.0.1:8000/request`
+
+get a specific request
+
+`curl http://127.0.0.1:8000/request/1`
+
+posting invalid email to create a request
+
+`curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/request -d '{"email":"van-33.com", "title":"The Alchemist"}'`
+
+post data with a non-existant book from the database table
+
+`curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/request -d '{"email":"van@33.com", "title":"no such book"}'`
+
+Deleting a request from the database
+
+`curl -X DELETE http://127.0.0.1:8000/request/3`
